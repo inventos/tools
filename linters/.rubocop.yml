@@ -1,0 +1,27 @@
+# Rubocop settings for Webcaster
+# General project settings
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.1
+
+# Settings below differ from the convention, but useful for us
+# 80 chars is too short
+Metrics/LineLength:
+  Max: 100
+
+# we have Russian language in comments
+Style/AsciiComments:
+  Enabled: false
+
+# Settings below are only for old codebase support
+# Our code should be fixed some time
+
+# we have lots of old-style hashes
+Style/HashSyntax: 
+  Enabled: false
+
+# we have lots of old-style hashes
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: false
