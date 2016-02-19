@@ -68,13 +68,11 @@ module.exports = {
 		"quote-props": [1, "consistent-as-needed"],
 		"semi-spacing": 1,
 		"semi": [2, "always"],
-		"space-after-keywords": 1,
 		"space-before-blocks": 1,
 		"space-before-function-paren": [1, "never"],
-		"space-before-keywords": [1, "always"],
-		"space-return-throw-case": 1,
 		"space-unary-ops": 1,
-		"spaced-comment": [1, "always"]
+		"spaced-comment": [1, "always"],
+		"keyword-spacing": 1
     },
     "env": {
         "node": true,
