@@ -1,5 +1,11 @@
+// Reference ESLint configuration file
+// May be used for NodeJS or frontend (browser) development with jQuery
+// 
+// Date: 2016-02-28
+// Contributors: sh84@inventos.ru
+
 module.exports = {
-	"rules": {
+	rules: {
 		"no-console": 0,
 		"no-extra-parens": 1,
 		"no-unexpected-multiline": 2,
@@ -11,8 +17,7 @@ module.exports = {
 		"no-extend-native": 2,
 		"no-invalid-this": 1,
 		"no-labels": 2,
-		"no-multi-spaces": [1, { exceptions: { "Property": true, "VariableDeclarator": true }}],
-		"key-spacing": [1, { align: "value" }],
+		"no-multi-spaces": [1, {exceptions: {Property: true, VariableDeclarator: true}}],
 		"no-native-reassign": 2,
 		"no-new-wrappers": 2,
 		"no-floating-decimal": 2,
@@ -21,35 +26,35 @@ module.exports = {
 		"no-self-compare": 2,
 		"no-throw-literal": 2,
 		"no-useless-call": 2,
-		"no-unused-expressions": [1, { allowShortCircuit: true, allowTernary: true }],
+		"no-unused-expressions": [1, {allowShortCircuit: true, allowTernary: true}],
 		"no-useless-concat": 2,
 		"no-void": 2,
 		"no-warning-comments": 1,
 		//"no-with": 2, == WithStatement
 		//"vars-on-top": 1,
 		"wrap-iife": [2, "inside"],
-		//"yoda": [2, "always", { "onlyEquality": true }],
-		"no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+		//"yoda": [2, "always", {onlyEquality: true}],
+		"no-unused-vars": [2, {vars: "local", args: "after-used"}],
 		"no-shadow-restricted-names": 2,
 		"no-shadow": 2,
 		"no-undefined": 2,
 		"no-use-before-define": [2, "nofunc"],
-		"handle-callback-err": [2, "^(err|error)$" ],
+		"handle-callback-err": [2, "^(err|error)$"],
 		"no-new-require": 1,
 		"no-path-concat": 1,
 
 		"array-bracket-spacing": [1, "never"],
 		"block-spacing": [1, "always"],
-		"brace-style": [1, "1tbs", { "allowSingleLine": true }],
-		"comma-spacing": [1, {"before": false, "after": true}],
+		"brace-style": [1, "1tbs", {allowSingleLine: true}],
+		"comma-spacing": [1, {before: false, after: true}],
 		"comma-style": [1, "last"],
 		"computed-property-spacing": [1, "never"],
 		"indent": 0,
-		"key-spacing": [1, {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
+		"key-spacing": [1, {beforeColon: false, afterColon: true, mode: "minimum"}],
 		"linebreak-style": [1, "unix"],
 		"max-depth": [1, 8],
 		"max-nested-callbacks": [1, 5],
-		"max-len": [1, 100, 4, {"ignoreComments": true, "ignoreUrls": true}],
+		"max-len": [1, 100, 4, {ignoreComments: true, ignoreUrls: true}],
 		"max-params": [1, 5],
 		"max-statements": [1, 20],
 		"new-cap": 1,
@@ -73,11 +78,11 @@ module.exports = {
 		"space-unary-ops": 1,
 		"spaced-comment": [1, "always"],
 		"keyword-spacing": 1
-    },
-    "env": {
-        "node": true,
-        "browser": true,
-        "jquery": true
-    },
-    "extends": "eslint:recommended",
+	},
+	env: {
+		node:    true,
+		browser: true,
+		jquery:  true
+	},
+	extends: "eslint:recommended"
 };
