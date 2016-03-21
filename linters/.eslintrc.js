@@ -76,7 +76,9 @@ module.exports = {
 		"space-before-blocks": 1,
 		"space-before-function-paren": [1, "never"],
 		"space-unary-ops": 1,
-		"spaced-comment": [1, "always"],
+		"spaced-comment": [1, "always", {
+			line: {markers: ["="]}
+		}],
 		"keyword-spacing": 1
 	},
 	env: {
