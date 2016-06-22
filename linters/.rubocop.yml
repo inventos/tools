@@ -15,6 +15,33 @@ Metrics/LineLength:
 Style/AsciiComments:
   Enabled: false
 
+Style/TrailingWhitespace:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/ModuleLength:
+  Max: 300
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
 # Settings below are only for old codebase support
 # Our code should be fixed some time
 
