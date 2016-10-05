@@ -79,9 +79,15 @@ module.exports = {
 		"spaced-comment": [1, "always", {
 			line: {markers: ["="]}
 		}],
-		"keyword-spacing": 1
+		"keyword-spacing": 1,
+		// for es6
+		"no-inner-declarations": 1 // temporary, in newest js it's correct
+	},
+	parserOptions: {
+		sourceType: "module"
 	},
 	env: {
+		es6:     true,
 		node:    true,
 		browser: true,
 		jquery:  true
