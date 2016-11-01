@@ -1,0 +1,48 @@
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию и пользовательские параметры.
+{
+	// Управляет видимостью полей глифа.
+	"editor.glyphMargin": true,
+
+	// Столбцы, в которых должны отображаться вертикальные линейки
+	"editor.rulers": [120],
+
+	// Число пробелов в табуляции.
+	"editor.tabSize": 2,
+
+	// Определяет, должны ли в редакторе отображаться символы-разделители.
+	"editor.renderWhitespace": true,
+
+	// Если этот параметр включен, при сохранении файла будут удалены завершающие символы-разделители.
+	"files.trimTrailingWhitespace": true,
+
+	// Настройка стандартных масок для исключения файлов и папок.
+	"files.exclude": {
+		"**/.git": true,
+		"**/.idea": true,
+		"**/.DS_Store": true,
+		"**/misc": true,
+		"**/tmp": true,
+		"**/*.a": true,
+		"**/*.o": true,
+		"**/*.pyc": true,
+		"**/*.so": true,
+		"**/*.sqlite3": true,
+		"**/*.swf": true,
+		".ctags": true,
+		".tags*": true
+	},
+
+	// Path to Python, you can use a custom version of Python by modifying this setting to include the full path.
+	"python.pythonPath": "/home/user/.pyenv/sb.ui/bin/python",
+
+	"python.autoComplete.extraPaths": ["/home/user/.pyenv/sb.ui/lib/python2.7/site-packages"],
+
+	// Whether to lint Python files using pep8
+	"python.linting.pep8Enabled": true,
+
+	// Arguments passed in. Each argument is a separate item in the array.
+	"python.linting.pylintArgs": ["--max-line-length", "120"],
+
+	// Arguments passed in. Each argument is a separate item in the array.
+	"python.linting.pep8Args": ["--max-line-length", "120"]
+}
