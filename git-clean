@@ -1,0 +1,39 @@
+#!/bin/bash
+# Keeps last N commits in current git repo. Use at own risk!
+# Version: 0.1
+#
+# Usage:
+# cd my-repo
+# ./git-clean <number of commits to keep>
+# git push --force
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <N first commits to save>"
+    exit 1
+fi
+
+save_commits="$1"
+total_commits=`git log --oneline | wc -l`
+
+echo "$total_commits found. Saving latest $save_commits..."
+
+save_commits=$(($save_commits + 1))
+while true; do
+    commit_sha=`git log --oneline --no-abbrev-commit | sed "${save_commits}q;d" | awk '{print $1}'`
+    if [ -z $commit_sha ]; then
+        echo "Done! Nothing to clean!"
+        break
+    fi
+    echo "Removing commit $commit_sha..."
+    git filter-branch --parent-filter "sed -e 's/-p $commit_sha//'" \
+                      --prune-empty \
+                      -- --all
+
+    git for-each-ref --format='%(refname)' refs/original | \
+    while read ref
+    do
+      git update-ref -d "$ref"
+    done
+done
+
+git reflog expire --expire=now --all && git gc --prune=now
